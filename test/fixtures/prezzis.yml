@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  datainiziovalidita: 2014-12-25
+  datafinevalidita: 2014-12-25
+  prezzofascia1: 1.5
+  prezzofascia2: 1.5
+  prezzofascia3: 1.5
+
+two:
+  datainiziovalidita: 2014-12-25
+  datafinevalidita: 2014-12-25
+  prezzofascia1: 1.5
+  prezzofascia2: 1.5
+  prezzofascia3: 1.5

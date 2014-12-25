@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2014-12-25
+  consumofascia1: 1
+  consumofascia2: 1
+  consumofascia3: 1
+  consumofascia1periodoprecedente: 1
+  consumofascia2periodoprecedente: 1
+  consumofascia3periodoprecedente: 1
+  produzionefascia1: 1
+  produzionefascia2: 1
+  produzionefascia3: 1
+  immissionefascia1: 1
+  immissionefascia2: 1
+  immissionefascia3: 1
+
+two:
+  data: 2014-12-25
+  consumofascia1: 1
+  consumofascia2: 1
+  consumofascia3: 1
+  consumofascia1periodoprecedente: 1
+  consumofascia2periodoprecedente: 1
+  consumofascia3periodoprecedente: 1
+  produzionefascia1: 1
+  produzionefascia2: 1
+  produzionefascia3: 1
+  immissionefascia1: 1
+  immissionefascia2: 1
+  immissionefascia3: 1

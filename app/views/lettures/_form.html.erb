@@ -1,0 +1,69 @@
+<%= form_for(@letture) do |f| %>
+  <% if @letture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@letture.errors.count, "error") %> prohibited this letture from being saved:</h2>
+
+      <ul>
+      <% @letture.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br>
+    <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :consumofascia1 %><br>
+    <%= f.number_field :consumofascia1 %>
+  </div>
+  <div class="field">
+    <%= f.label :consumofascia2 %><br>
+    <%= f.number_field :consumofascia2 %>
+  </div>
+  <div class="field">
+    <%= f.label :consumofascia3 %><br>
+    <%= f.number_field :consumofascia3 %>
+  </div>
+  <div class="field">
+    <%= f.label :consumofascia1periodoprecedente %><br>
+    <%= f.number_field :consumofascia1periodoprecedente %>
+  </div>
+  <div class="field">
+    <%= f.label :consumofascia2periodoprecedente %><br>
+    <%= f.number_field :consumofascia2periodoprecedente %>
+  </div>
+  <div class="field">
+    <%= f.label :consumofascia3periodoprecedente %><br>
+    <%= f.number_field :consumofascia3periodoprecedente %>
+  </div>
+  <div class="field">
+    <%= f.label :produzionefascia1 %><br>
+    <%= f.number_field :produzionefascia1 %>
+  </div>
+  <div class="field">
+    <%= f.label :produzionefascia2 %><br>
+    <%= f.number_field :produzionefascia2 %>
+  </div>
+  <div class="field">
+    <%= f.label :produzionefascia3 %><br>
+    <%= f.number_field :produzionefascia3 %>
+  </div>
+  <div class="field">
+    <%= f.label :immissionefascia1 %><br>
+    <%= f.number_field :immissionefascia1 %>
+  </div>
+  <div class="field">
+    <%= f.label :immissionefascia2 %><br>
+    <%= f.number_field :immissionefascia2 %>
+  </div>
+  <div class="field">
+    <%= f.label :immissionefascia3 %><br>
+    <%= f.number_field :immissionefascia3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

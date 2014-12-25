@@ -1,0 +1,37 @@
+<%= form_for(@prezzi) do |f| %>
+  <% if @prezzi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prezzi.errors.count, "error") %> prohibited this prezzi from being saved:</h2>
+
+      <ul>
+      <% @prezzi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :datainiziovalidita %><br>
+    <%= f.date_select :datainiziovalidita %>
+  </div>
+  <div class="field">
+    <%= f.label :datafinevalidita %><br>
+    <%= f.date_select :datafinevalidita %>
+  </div>
+  <div class="field">
+    <%= f.label :prezzofascia1 %><br>
+    <%= f.text_field :prezzofascia1 %>
+  </div>
+  <div class="field">
+    <%= f.label :prezzofascia2 %><br>
+    <%= f.text_field :prezzofascia2 %>
+  </div>
+  <div class="field">
+    <%= f.label :prezzofascia3 %><br>
+    <%= f.text_field :prezzofascia3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

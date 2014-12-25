@@ -1,0 +1,70 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>	
+
+<div class="page-header">
+  <h1>Gestione letture contatori enel</small></h1>
+</div>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Lista letture fotovoltaico</div>
+
+  <!-- Table -->
+  <table class="table">
+  
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>ConsumoF1</th>
+      <th>ConsumoF2</th>
+      <th>ConsumoF3</th>
+      <th>ConsumoF1PP</th>
+      <th>ConsumoF2PP</th>
+      <th>ConsumoF3PP</th>
+      <th>ProduzioneF1</th>
+      <th>ProduzioneF2</th>
+      <th>ProduzioneF3</th>
+      <th>ImmissioneF1</th>
+      <th>ImmissioneF2</th>
+      <th>ImmissioneF3</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lettures.each do |letture| %>
+      <tr>
+        <td nowrap><%= letture.data %></td>
+        <td><%= letture.consumofascia1 %></td>
+        <td><%= letture.consumofascia2 %></td>
+        <td><%= letture.consumofascia3 %></td>
+        <td><%= letture.consumofascia1periodoprecedente %></td>
+        <td><%= letture.consumofascia2periodoprecedente %></td>
+        <td><%= letture.consumofascia3periodoprecedente %></td>
+        <td><%= letture.produzionefascia1 %></td>
+        <td><%= letture.produzionefascia2 %></td>
+        <td><%= letture.produzionefascia3 %></td>
+        <td><%= letture.immissionefascia1 %></td>
+        <td><%= letture.immissionefascia2 %></td>
+        <td><%= letture.immissionefascia3 %></td>
+        <td><%= link_to 'Show', letture %></td>
+        <td><%= link_to 'Edit', edit_letture_path(letture) %></td>
+        <td><%= link_to 'Destroy', letture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+<nav>
+  <ul class="pager">
+    <li><a href=<%=new_letture_path%> class="btn btn-xs btn-default"><span class="glyphicon glyphicon-plus"></span> Nuova lettura</a></li>
+    <li><a href=<%=prezzis_path%> class="btn btn-xs btn-default"><span class="glyphicon glyphicon-shopping-cart"></span> Lista prezzi ENEL</a></li>
+  </ul>
+</nav>

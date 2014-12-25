@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Datainiziovalidita:</strong>
+  <%= @prezzi.datainiziovalidita %>
+</p>
+
+<p>
+  <strong>Datafinevalidita:</strong>
+  <%= @prezzi.datafinevalidita %>
+</p>
+
+<p>
+  <strong>Prezzofascia1:</strong>
+  <%= @prezzi.prezzofascia1 %>
+</p>
+
+<p>
+  <strong>Prezzofascia2:</strong>
+  <%= @prezzi.prezzofascia2 %>
+</p>
+
+<p>
+  <strong>Prezzofascia3:</strong>
+  <%= @prezzi.prezzofascia3 %>
+</p>
+
+<%= link_to 'Edit', edit_prezzi_path(@prezzi) %> |
+<%= link_to 'Back', prezzis_path %>
